@@ -31,6 +31,7 @@ execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=11,timer=1}] 125 levels
 
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 12 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 40 levels
@@ -40,6 +41,7 @@ execute if entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 10
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 140 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
+execute if entity @e[scores={mode=1}] run xp add @s[scores={class=11,timer=1}] 125 levels
 
 #reaper
 execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
@@ -97,3 +99,7 @@ execute as @a[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spect
 execute as @a[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
 execute as @a[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
 execute as @a[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+
+#hunter shift
+execute as @s[scores={class=11}] at @s run effect give @s levitation 2 12
+execute as @s[scores={class=11}] at @s run scoreboard players set @s nolev 25

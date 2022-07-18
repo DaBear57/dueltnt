@@ -9,5 +9,6 @@ execute as @s[scores={class=7}] at @s run function game:char/echo/items
 execute as @s[scores={class=8}] at @s run function game:char/gardener/items
 execute as @s[scores={class=9}] at @s run function game:char/overlord/items
 execute as @s[scores={class=10}] at @s run function game:char/shard/items
+execute as @s[scores={class=11}] at @s run function game:char/hunter/items
 
 execute as @s[scores={click=1..}] at @s run function game:char/phantomitems

@@ -70,8 +70,18 @@ kill @e[tag=explode,type=arrow]
 scoreboard players set @e[type=arrow] Inbarrier 0
 scoreboard players set @e[type=arrow,nbt={inBlockState:{Name:"minecraft:barrier"}}] Inbarrier 1
 #scoreboard players set @e[type=arrow,nbt={inBlockState:{Name:"minecraft:white_stained_glass"}}] Inbarrier 2
-execute as @e[tag=inG,type=arrow,scores={BombBow=..0}] at @s run function game:arrow
-kill @e[tag=inG,type=arrow,scores={BombBow=..0}]
+###hunter bow stuff
+scoreboard players set @e[tag=inG,type=arrow,scores={HuntBow=1..,HuntBowDelay=..0}] HuntBowDelay 1
+scoreboard players add @e[tag=inG,type=arrow,scores={HuntBow=1..}] HuntBowDelay 1
+execute as @e[tag=inG,type=arrow,scores={BombBow=..0,HuntBow=..0}] at @s run function game:arrow
+execute as @e[tag=inG,type=arrow,scores={HuntBowDelay=60}] at @s run function game:arrow
+execute as @a[gamemode=adventure,scores={class=11}] if score @s ouuid = @e[tag=inG,type=arrow,scores={HuntBowDelay=60},limit=1] ouuid run give @s arrow
+kill @e[tag=inG,type=arrow,scores={HuntBowDelay=60}]
+execute as @a[gamemode=adventure,scores={class=11}] if score @s ouuid = @e[nbt={inGround:0b},type=arrow,scores={HuntBowDelay=1..},limit=1] ouuid run give @s arrow
+kill @e[nbt={inGround:0b},type=arrow,scores={HuntBowDelay=1..}]
+execute as @a[gamemode=adventure,scores={class=11}] if score @s ouuid = @e[x=595,y=0,z=595,dx=45,dy=5,dz=45,type=arrow,limit=1] ouuid run give @s arrow
+kill @e[x=595,y=0,z=595,dx=45,dy=5,dz=45,type=arrow]
+kill @e[tag=inG,type=arrow,scores={BombBow=..0,HuntBow=..0}]
 execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players set @a[gamemode=adventure,distance=..10,scores={class=8}] rjump 10
 
 #slime
@@ -542,6 +552,15 @@ scoreboard players set @a shootBall 0
 
 #ghost bow
 execute as @e[type=arrow,scores={ballArrowT=1..,VaporBow=1..},tag=crit] at @s run function game:char/ghost/critarrow
+
+#hunter wall
+execute as @a[gamemode=adventure,scores={class=11},y_rotation=-45..45] at @e[type=vex,name=wall] run fill ~-2 ~ ~ ~2 ~2 ~ white_stained_glass keep
+execute as @a[gamemode=adventure,scores={class=11},y_rotation=-180..-135] at @e[type=vex,name=wall] run fill ~-2 ~ ~ ~2 ~2 ~ white_stained_glass keep
+execute as @a[gamemode=adventure,scores={class=11},y_rotation=135..180] at @e[type=vex,name=wall] run fill ~-2 ~ ~ ~2 ~2 ~ white_stained_glass keep
+execute as @a[gamemode=adventure,scores={class=11},y_rotation=-135..-45] at @e[type=vex,name=wall] run fill ~ ~ ~-2 ~ ~2 ~2 white_stained_glass keep
+execute as @a[gamemode=adventure,scores={class=11},y_rotation=45..135] at @e[type=vex,name=wall] run fill ~ ~ ~-2 ~ ~2 ~2 white_stained_glass keep
+tp @e[type=vex,name=wall] ~ ~-1000 ~
+kill @e[type=vex,name=wall]
 
 #remove fire
 scoreboard players add @e[tag=firecheck] firer 1

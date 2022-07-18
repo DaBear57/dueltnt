@@ -1,0 +1,63 @@
+{
+  "classes:class3": {
+    "criteria": {
+      "trapper": "2022-07-17 22:57:04 -0400"
+    },
+    "done": true
+  },
+  "classes:class5": {
+    "criteria": {
+      "mad": "2022-07-17 22:56:51 -0400"
+    },
+    "done": true
+  },
+  "classes:class4": {
+    "criteria": {
+      "wizard": "2022-07-17 22:56:33 -0400"
+    },
+    "done": true
+  },
+  "classes:root": {
+    "criteria": {
+      "warrior": "2022-07-17 22:56:14 -0400"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2022-07-17 22:57:02 -0400"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2022-07-17 22:56:14 -0400"
+    },
+    "done": true
+  },
+  "classes:class7": {
+    "criteria": {
+      "echo": "2022-07-17 22:56:35 -0400"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2022-07-17 22:57:35 -0400"
+    },
+    "done": true
+  },
+  "classes:class9": {
+    "criteria": {
+      "overlord": "2022-07-17 22:57:50 -0400"
+    },
+    "done": true
+  },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2022-07-17 22:57:16 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 2865
+}

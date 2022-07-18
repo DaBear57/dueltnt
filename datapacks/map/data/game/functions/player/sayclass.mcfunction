@@ -11,6 +11,7 @@ execute as @s[tag=randclass,gamemode=adventure,scores={teamed=..0,class=7}] at @
 execute as @s[tag=randclass,gamemode=adventure,scores={teamed=..0,class=8}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Gardener","color":"green"},{"text":" (random)","color":"white"}]
 execute as @s[tag=randclass,gamemode=adventure,scores={teamed=..0,class=9}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Overlord","color":"gold"},{"text":" (random)","color":"white"}]
 execute as @s[tag=randclass,gamemode=adventure,scores={teamed=..0,class=10}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Shard","color":"dark_aqua"},{"text":" (random)","color":"white"}]
+execute as @s[tag=randclass,gamemode=adventure,scores={teamed=..0,class=11}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Hunter","color":"green"},{"text":" (random)","color":"white"}]
 
 execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=0}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Soldier","color":"red"}]
 execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=1}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Assassin","color":"dark_purple"}]
@@ -23,6 +24,7 @@ execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=7}] at 
 execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=8}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Gardener","color":"green"}]
 execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=9}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Overlord","color":"gold"}]
 execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=10}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Shard","color":"dark_aqua"}]
+execute as @s[tag=!randclass,gamemode=adventure,scores={teamed=..0,class=11}] at @s run tellraw @a [{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Hunter","color":"green"}]
 
 execute as @s[tag=red,tag=randclass,gamemode=adventure,scores={teamed=1..,class=0}] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"RED","color":"red"},{"text":"] ","color":"white"},{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Soldier","color":"red"},{"text":" (random)","color":"white"}]
 execute as @s[tag=red,tag=randclass,gamemode=adventure,scores={teamed=1..,class=1}] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"RED","color":"red"},{"text":"] ","color":"white"},{"selector":"@s","color":"gold"},{"text":" spawning as: ","color":"white"},{"text":"Assassin","color":"dark_purple"},{"text":" (random)","color":"white"}]

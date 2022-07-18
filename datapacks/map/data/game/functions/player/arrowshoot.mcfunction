@@ -9,5 +9,9 @@ execute as @s[scores={class=7}] at @s run scoreboard players set @e[type=arrow,s
 execute as @s[scores={class=8}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] GardBow 1
 #execute as @s[scores={class=8}] at @s run data merge entity @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] {PierceLevel:10b}
 execute as @s[scores={class=10}] at @s run execute as @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] at @s run function game:char/shard/frostbow
+execute as @s[scores={class=11}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] HuntBow 1
+execute as @s[scores={class=..10}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] HuntBow 0
+execute as @s[scores={class=11}] at @s run execute as @e[type=arrow] store result score @s ouuid run data get entity @s Owner[0]
+execute as @s[scores={class=11}] at @s run execute store result score @s ouuid as @e[type=arrow] run data get entity @s Owner[0]
 execute as @s[scores={chickenbow=1..}] at @s run tag @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] add chickenbow
 scoreboard players set @a bowDetect 0

@@ -128,3 +128,8 @@ execute as @s[type=arrow,scores={GardBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:
 #frost bow
 execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:3}
 execute as @s[type=arrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1}
+
+#hunter bow
+execute as @s[type=arrow,scores={HuntBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:1}
+execute as @s[type=arrow,scores={HuntBow=1..}] at @s run summon tnt ~ ~.1 ~ {Fuse:1}
+execute as @s[type=arrow,scores={HuntBow=1..}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ 1 1

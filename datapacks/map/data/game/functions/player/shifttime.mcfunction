@@ -28,3 +28,5 @@ execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adv
 scoreboard players set @a[gamemode=adventure,scores={timer=45..,class=8}] timer 0
 
 scoreboard players set @a[gamemode=adventure,scores={timer=60..,class=10}] timer 0
+
+scoreboard players set @a[gamemode=adventure,scores={timer=125..,class=11}] timer 0
